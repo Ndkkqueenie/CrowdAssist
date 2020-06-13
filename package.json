@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ndkkqueenie/CrowdAssist.git"
+    "url": "git+https://github.com/Ndkkqueenie/crowdassist.git"
   },
   "author": "Queendalin Nduka",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ndkkqueenie/CrowdAssist/issues"
+    "url": "https://github.com/Ndkkqueenie/crowdassist/issues"
   },
-  "homepage": "https://github.com/Ndkkqueenie/CrowdAssist#readme",
+  "homepage": "https://github.com/Ndkkqueenie/crowdassist#readme",
   "dependencies": {
     "lite-server": "^2.5.4"
   }
