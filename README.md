@@ -14,4 +14,4 @@ The application is to assist pulic health workers in front line of the global pa
 # Difficulties & Challenges you faced
 Bad electricity and low resources, donation payment method.
 # Go-to-Market Evaluation
-![Crowd-Funding Model](https://github.com/Ndkkqueenie/crowdassist/tree/master/images/Models.png)
+![Crowd-Funding Model](/images/Models.png)
