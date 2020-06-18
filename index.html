@@ -5,13 +5,10 @@
   <title>crowdassist &mdash; Website</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
     <link href="https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -20,15 +17,12 @@
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/style.css">
 
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-    
     <div class="site-wrap" id="home-section">
 
       <div class="site-mobile-menu site-navbar-target">
@@ -45,7 +39,7 @@
           <div class="row">
             <div class="col-md-6 text-md-left pl-0">
               <a href="#third-sec" class="p-3">Events</a>
-              <a href="#" class="p-3">Become A Volunteer</a>
+              <a data-toggle="modal" data-target="#signupModal" class="p-3" style="color: white !important; cursor: pointer !important;">Become A Volunteer</a>
             </div>
             <div class="col-md-6 text-md-right">
               <a href="#" class="p-3"><span class="icon-twitter"></span></a>
@@ -54,17 +48,14 @@
           </div>
         </div>
       </div>
+
       <header class="site-navbar site-navbar-target bg-secondary shadow" role="banner">
 
         <div class="container">
-          <div class="row align-items-center position-relative">
-            
-
+          <div class="row align-items-center">
             <div class="site-logo">
               <a href="#" class="text-white">CrowdAssist</a>
             </div>
-
-
             <nav class="site-navigation text-left ml-auto " role="navigation">
               <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                 <li class="active"><a href="index.html" class="nav-link">Home</a></li>
@@ -73,24 +64,95 @@
                 <li><a href="#fourth-sec" class="nav-link">Contact</a></li>
               </ul>
             </nav>
-
-
-            <div class="ml-auto toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-white"><span class="icon-menu h3 text-white"></span></a></div>
-
-            
-
           </div>
         </div>
-
+        <div id="signupModal" tabindex="-1" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-lg" role="document">
+              <!-- Modal content-->
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title white">Volunteer Sign-up </h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                      <form onsubmit="return handleSumbit(event)">
+                      <div class="form-row">
+                        <div class="col-md-12">
+                          <label for="inputName">Full Name</label>
+                          
+                              <input type="text" class="form-control" id="inputName" name="name" placeholder="Full Name" onchange="return handleInputChange" required>
+                          </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-6 mt-3">
+                          <label for="validationTooltip03">City</label>
+                          <input type="text" class="form-control" id="validationTooltip03" required>
+                          <div class="invalid-tooltip">
+                            Please provide a valid city.
+                          </div>
+                        </div>
+                        <div class="col-md-3 mt-3">
+                          <label for="validationTooltip04">State</label>
+                          <input type="text" class="form-control" id="validationTooltip04" required>
+                          <div class="invalid-tooltip">
+                            Please select a valid state.
+                          </div>
+                        </div>
+                        <div class="col-md-3 mt-3">
+                          <label for="validationTooltip05">Country</label>
+                          <input type="text" class="form-control" id="validationTooltip05" required>
+                          <div class="invalid-tooltip">
+                            Please provide a valid zip.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                          
+                        <div class="col-5 col-md-5 mt-3">  
+                          <label for="telnum">Contact Tel.</label>
+                            <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area code">
+                        </div>
+                        <div class="col-7 col-md-7 mt-3">
+                          <label for="telnum">Phone Number</label>
+                            <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mt-3">
+                        <label for="emailid" class="col-md-2 col-form-label">Email</label>
+                        
+                            <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 offset-md-2 mt-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="approve" id="approve" value="">
+                                <label class="form-check-label" for="approve">
+                                    <strong>May we contact you?</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 offset-md-1 mt-3">
+                            <select class="form-control">
+                                <option>Tel.</option>
+                                <option>Email</option>
+                            </select>
+                        </div>
+                    </div>
+                      <div class="form-group row">
+                          <div class="col-md-10">
+                              <button type="submit" class="btn btn-primary">Register </button>
+                          </div>
+                      </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
       </header>
-
-
-
-
-    <div class="owl-carousel-wrapper">
-
       
-
+    <div class="owl-carousel-wrapper">
       <div class="box-92819">
         <h4 class="text-white mb-3">Join The Movement To Strengthen Public Health Response To COVID-19 and To Support the Community</h4>
         <p><a href="#fifth-sec" class="btn btn-primary py-3 px-4 rounded-0">Donate Now</a></p>
@@ -103,6 +165,7 @@
         
       </div>
     </div>
+
     <div class="site-section">
       <div class="container" id="first-sec">
         

@@ -132,6 +132,12 @@ html {
 .btn.btn-primary {
   background-color: #2085f8 !important;
 }
+.modal-header {
+  background-color: #2085f8 !important;
+}
+.modal-header button, h4{
+  color: white !important;
+}
 
 .bg-gray-1 {
   border-color: #f7f7f7; }

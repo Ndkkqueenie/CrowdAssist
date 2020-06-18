@@ -1,6 +1,6 @@
 # CrowdAssist
 # Introduction
-* CrowdAsist is crowdfunding app to assist public health workers and suppport local businesses. 
+CrowdAsist is crowdfunding app to assist public health workers and suppport local businesses. 
 # Purpose & Motivation
 As we ramp up efforts to combat the spread of COVID-19 among valuable populations and provide finanacial assistance to those most in need, We donate to public health and social services agencies to fill workspace gaps.
 
